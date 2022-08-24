@@ -7,7 +7,9 @@ body{
     align-items: center;
     display: flex;
     height: 100vh;
+    overflow: hidden;
     justify-content: center;
+    margin: 0;
      
 }
 .container{
@@ -15,25 +17,38 @@ body{
     border: 3px rgb(0, 0, 0) solid;
     border-radius: 10px;
     padding: 30px;
-    width: 800px;
+    width: 1000px;
     text-align: center;
 }    
 .input-container{
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 40px 0;
-    flex-wrap: wrap;
+    /* margin: 40px 0;
+    flex-wrap: wrap; */
     
 }
-.input{
+.input {
     border-radius: 5px;
-    border: 1px rgb(131, 174, 239) solid;
-    margin: 1%;
-    font-size: 60px;
-    text-align: center;
-    box-shadow: rgb(118, 175, 236);
+    font-size: 75px;
     height: 120px;
     width: 100px;
+    border: 1px solid #eee;
+    margin: 1%;
+    text-align: center;
+    font-weight: 300;
+    -moz-appearance: textfield;
+  }
+@media (max-width: 800px) {
+    .code-container {
+      flex-wrap: wrap;
+    }
+    .input{
+        font-size: 50px;
+        height: 70px;
+        max-width: 60px;
+    }
 }
 .input::-webkit-inner-spin-button,
 .input::-webkit-outer-spin-button {
@@ -46,12 +61,14 @@ body{
 }
 
 .sec{
-    font-size: 18px;
+    /* font-size: 18px; */
     background-color: #eaeaea;
-    border-radius: 5px;
     display: inline-block;
-    width: 500px;
-    padding: 20px;
+    padding: 10px;
+    line-height: 20px;
+    max-width: 400px;
+    
+    border-radius: 5px;
     color: rgb(55, 55, 57);
 
 }
